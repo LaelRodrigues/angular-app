@@ -1,0 +1,11 @@
+<h2>Lista de Produtos</h2>
+@if (products.length == 0) {
+<p>Não há produtos</p>
+} @else {
+<app-product-data
+  [products]="products"
+  (productEvent)="clickProductList($event)"
+></app-product-data>
+} @if(produtoSelect) {
+<p>Você clicou no {{ produtoSelect }}° produto</p>
+}

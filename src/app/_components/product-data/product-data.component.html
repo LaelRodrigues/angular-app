@@ -1,0 +1,7 @@
+@for (product of products; track $index) {
+<li (click)="clickProduct($index + 1)">
+  {{ product.name }}:
+  {{ product.description }}
+  ({{ product.price }})
+</li>
+}
