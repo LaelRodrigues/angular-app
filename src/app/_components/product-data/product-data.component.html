@@ -1,7 +1,43 @@
-@for (product of products; track $index) {
-<li (click)="clickProduct($index + 1)">
-  {{ product.name }}:
-  {{ product.description }}
-  ({{ product.price }})
-</li>
+@for (product of products(); track $index) {
+<mat-list-item class="product-item">
+  <div class="product-details">
+    <span class="product-name">{{ product.name }}: </span>
+    <span class="product-description">{{ product.description }}</span>
+    <span class="product-price"
+      >({{
+        (product.quant * product.price).toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL"
+        })
+      }})</span
+    >
+    <button
+      mat-stroked-button
+      class="action-button remove-button"
+      (click)="remove($index)"
+    >
+      <mat-icon class="remove-icon">delete</mat-icon>
+    </button>
+  </div>
+
+  <div class="quantity-controls">
+    <button mat-stroked-button class="action-button" (click)="inc($index)">
+      +
+    </button>
+    <span class="product-quant">{{ product.quant }}</span>
+    <button mat-stroked-button class="action-button" (click)="dec($index)">
+      -
+    </button>
+  </div>
+</mat-list-item>
 }
+<br />
+<span class="product-price">
+  Total:
+  {{
+    total().toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    })
+  }}
+</span>

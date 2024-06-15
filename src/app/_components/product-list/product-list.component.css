@@ -1,0 +1,15 @@
+.custom-card-container {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Centraliza o card horizontalmente */
+  margin-top: 20px; /* Espaçamento superior */
+}
+.custom-card {
+  display: inline-block; /* Ajusta o tamanho do card ao conteúdo */
+  padding: 16px; /* Espaçamento interno do card */
+  margin: 16px auto; /* Espaçamento externo do card */
+  max-width: 100%; /* Garante que o card não ultrapasse a largura do contêiner */
+}
+
+.centered-title {
+  text-align: center; /* Centraliza o texto do título */
+}

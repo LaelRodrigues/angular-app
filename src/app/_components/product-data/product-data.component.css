@@ -1,0 +1,40 @@
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-description {
+  margin-right: 10px;
+}
+
+.product-price {
+  color: #666;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.product-quant {
+  margin: 0 10px;
+}
+
+.remove-button {
+  margin-left: 10px;
+}
+
+.remove-icon {
+  color: red;
+}

@@ -1,11 +1,15 @@
 import { Product } from './../../_model/Product';
 import { Component } from '@angular/core';
 import { ProductDataComponent } from '../product-data/product-data.component';
+import { MatCardModule } from '@angular/material/card';
+
+
+
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductDataComponent],
+  imports: [ProductDataComponent, MatCardModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -17,17 +21,20 @@ export class ProductListComponent {
     {
       name: 'Pizza da mãe',
       description: 'Saborosa pizza caseira',
-      price: 79.9
+      price: 79.9,
+      quant: 1
     },
     {
       name: 'Churrasquinho',
       description: 'Delicioso espetinho',
-      price: 29.9
+      price: 29.9,
+      quant: 1
     },
     {
       name: 'Espaguete',
       description: 'Apetitoso macarrão',
-      price: 59.9
+      price: 59.9,
+      quant: 1
     }
   ]
 

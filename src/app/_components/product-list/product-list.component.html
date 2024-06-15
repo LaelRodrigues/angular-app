@@ -1,11 +1,15 @@
-<h2>Lista de Produtos</h2>
-@if (products.length == 0) {
-<p>Não há produtos</p>
-} @else {
-<app-product-data
-  [products]="products"
-  (productEvent)="clickProductList($event)"
-></app-product-data>
-} @if(produtoSelect) {
-<p>Você clicou no {{ produtoSelect }}° produto</p>
-}
+<div class="custom-card-container">
+  <mat-card class="custom-card">
+    <h2 class="centered-title">Lista de Produtos</h2>
+    @if (products.length == 0) {
+    <p>Não há produtos</p>
+    } @else {
+    <app-product-data
+      [products]="products"
+      (productEvent)="clickProductList($event)"
+    ></app-product-data>
+    } @if(produtoSelect) {
+    <p>Você clicou no {{ produtoSelect }}° produto</p>
+    }
+  </mat-card>
+</div>
